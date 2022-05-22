@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nora.unifoodcourt">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.nora.unifoodcourt.activity.SplashActivity">
+        </activity>
+        <activity android:name="com.nora.unifoodcourt.activity.MainActivity"/>
+        <activity android:name="com.nora.unifoodcourt.activity.MyCartActivity"/>
+        <activity android:name="com.nora.unifoodcourt.activity.MyOrdersActivity" />
+        <activity android:name="com.nora.unifoodcourt.activity.OrderDetailsActivity" />
+        <activity android:name="com.nora.unifoodcourt.activity.SignUpActivity" />
+        <activity android:name="com.nora.unifoodcourt.activity.RestaurantActivity" />
+        <activity android:name="com.nora.unifoodcourt.activity.FoodActivity" />
+        <activity android:name="com.nora.unifoodcourt.activity.SignInActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

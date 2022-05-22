@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/topBarInclude"
+        layout="@layout/top_bar_layout" />
+
+    <ImageView
+        android:id="@+id/imgV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0.8"
+        android:src="@drawable/_1_zataar_mankeesh"
+        app:layout_constraintDimensionRatio="1.5:1"
+        app:layout_constraintTop_toBottomOf="@id/topBarInclude" />
+
+
+    <TextView
+        android:id="@+id/quantityTxtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Quantity"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/quantityValueTxtV"
+        app:layout_constraintStart_toStartOf="@id/quantityValueTxtV"
+        app:layout_constraintTop_toBottomOf="@id/imgV" />
+
+    <ImageView
+        android:id="@+id/increaseImgBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="10dp"
+        android:src="@drawable/ic_increase_green_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/quantityValueTxtV"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/quantityValueTxtV" />
+
+    <ImageView
+        android:id="@+id/decreaseImgBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="10dp"
+        android:src="@drawable/ic_decrease_red_50dp"
+        app:layout_constraintBottom_toBottomOf="@id/quantityValueTxtV"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/quantityValueTxtV" />
+
+
+    <TextView
+        android:id="@+id/quantityValueTxtV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/background_edit_text"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="1"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/increaseImgBtn"
+        app:layout_constraintStart_toEndOf="@id/decreaseImgBtn"
+        app:layout_constraintTop_toBottomOf="@id/quantityTxtV" />
+
+    <Button
+        android:id="@+id/addToCartBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_accent_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Add to cart"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

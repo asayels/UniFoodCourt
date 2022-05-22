@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/topBarInclude"
+        layout="@layout/top_bar_layout" />
+
+    <include
+        android:id="@+id/orderInclude"
+        layout="@layout/cardview_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/topBarInclude" />
+
+    <TextView
+        android:id="@+id/orderItemsTxtV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Order Items"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/orderInclude" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/creditCardBtn"
+        app:layout_constraintTop_toBottomOf="@id/orderItemsTxtV" />
+
+    <Button
+        android:id="@+id/creditCardBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_accent_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Credit Card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cashBtn"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/orderReceivedBtn" />
+
+    <Button
+        android:id="@+id/cashBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_accent_button"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/creditCardBtn"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Cash"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/orderReceivedBtn" />
+
+    <Button
+        android:id="@+id/orderReceivedBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_accent_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Order Received"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/orderReceivedTxtV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Order has been received"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@id/orderReceivedBtn"
+        app:layout_constraintEnd_toEndOf="@id/orderReceivedBtn"
+        app:layout_constraintStart_toStartOf="@id/orderReceivedBtn"
+        app:layout_constraintTop_toTopOf="@id/orderReceivedBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
